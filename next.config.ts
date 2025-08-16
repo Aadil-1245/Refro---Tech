@@ -1,7 +1,6 @@
-import type {NextConfig} from 'next';
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -18,6 +17,12 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+
+  // 👇 This tells Next.js that your app directory is inside "src"
+  experimental: {
+    appDir: true,
+  },
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
 };
 
 export default nextConfig;
